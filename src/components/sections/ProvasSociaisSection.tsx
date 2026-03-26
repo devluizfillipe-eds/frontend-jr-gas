@@ -14,7 +14,7 @@ const depoimentos = [
   {
     name: "João P.",
     bairro: "Jardim das Flores",
-    text: "Uso o GásRápido há 6 meses. Sempre pontual, produto de qualidade e preço justo. Excelente!",
+    text: "Uso o Junior Gás há 6 meses. Sempre pontual, produto de qualidade e preço justo. Excelente!",
     stars: 5,
     emoji: "👨",
   },
@@ -52,10 +52,10 @@ export default function ProvasSociaisSection() {
   return (
     <section
       id="depoimentos"
-      className="py-20 bg-slate-950 relative overflow-hidden"
+      className="py-20 bg-gray-50 relative overflow-hidden"
     >
       {/* Glow */}
-      <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-slate-900 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-white to-transparent" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -68,7 +68,7 @@ export default function ProvasSociaisSection() {
           <span className="text-sm font-semibold text-orange-400 uppercase tracking-widest mb-3 block">
             Depoimentos reais
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
             O que nossos clientes{" "}
             <span className="text-orange-400">falam de nós</span>
           </h2>
@@ -79,7 +79,7 @@ export default function ProvasSociaisSection() {
                 className="w-5 h-5 fill-yellow-400 text-yellow-400"
               />
             ))}
-            <span className="text-slate-400 text-sm ml-2">
+            <span className="text-gray-500 text-sm ml-2">
               5.0 · 127 avaliações
             </span>
           </div>
@@ -93,7 +93,7 @@ export default function ProvasSociaisSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-slate-900/80 border border-slate-700/50 rounded-2xl p-6 relative hover:border-orange-500/30 transition-colors"
+              className="bg-white border border-gray-200 rounded-2xl p-6 relative hover:border-orange-400/40 transition-colors shadow-sm"
             >
               <Quote className="absolute top-4 right-4 w-6 h-6 text-orange-500/20" />
               <div className="flex items-center gap-1 mb-3">
@@ -104,16 +104,16 @@ export default function ProvasSociaisSection() {
                   />
                 ))}
               </div>
-              <p className="text-slate-300 text-sm leading-relaxed mb-4 italic">
+              <p className="text-gray-600 text-sm leading-relaxed mb-4 italic">
                 &ldquo;{d.text}&rdquo;
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-xl">
+                <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-xl">
                   {d.emoji}
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">{d.name}</p>
-                  <p className="text-slate-500 text-xs">{d.bairro}</p>
+                  <p className="text-gray-900 font-semibold text-sm">{d.name}</p>
+                  <p className="text-gray-400 text-xs">{d.bairro}</p>
                 </div>
               </div>
             </motion.div>

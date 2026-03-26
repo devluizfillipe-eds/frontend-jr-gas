@@ -28,7 +28,7 @@ export default function GarantiaSection() {
   return (
     <section
       id="garantia"
-      className="py-20 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden"
+      className="py-20 bg-white relative overflow-hidden"
     >
       {/* Background decor */}
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-64 bg-green-500/5 blur-3xl" />
@@ -43,11 +43,11 @@ export default function GarantiaSection() {
           <span className="text-sm font-semibold text-green-400 uppercase tracking-widest mb-3 block">
             Garantia real
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
             Compre com{" "}
             <span className="text-green-400">total segurança</span>
           </h2>
-          <p className="text-slate-400 mt-4 text-lg max-w-xl mx-auto">
+          <p className="text-gray-500 mt-4 text-lg max-w-xl mx-auto">
             A sua tranquilidade é nossa prioridade. Por isso oferecemos garantias reais.
           </p>
         </motion.div>
@@ -60,13 +60,13 @@ export default function GarantiaSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="text-center p-8 rounded-3xl border border-green-500/20 bg-green-500/5 hover:border-green-500/40 transition-colors"
+              className="text-center p-8 rounded-3xl border border-green-400/30 bg-green-50 hover:border-green-400/60 transition-colors shadow-sm"
             >
-              <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
                 <g.icon className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-white font-bold text-xl mb-3">{g.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <h3 className="text-gray-900 font-bold text-xl mb-3">{g.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
                 {g.description}
               </p>
             </motion.div>
@@ -82,8 +82,8 @@ export default function GarantiaSection() {
           className="mt-12 mx-auto max-w-sm bg-gradient-to-r from-green-500/20 to-green-600/10 border border-green-500/30 rounded-2xl p-6 text-center"
         >
           <div className="text-4xl mb-2">🛡️</div>
-          <p className="text-white font-bold text-lg">Garantia de 7 dias</p>
-          <p className="text-slate-400 text-sm mt-1">
+          <p className="text-gray-900 font-bold text-lg">Garantia de 7 dias</p>
+          <p className="text-gray-500 text-sm mt-1">
             Conforme o Código de Defesa do Consumidor
           </p>
         </motion.div>

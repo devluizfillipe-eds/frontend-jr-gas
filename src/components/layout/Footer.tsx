@@ -5,7 +5,7 @@ export default function Footer() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá%2C+gostaria+de+comprar+o+gás.`;
 
   return (
-    <footer className="bg-slate-950 border-t border-slate-800 text-slate-400">
+    <footer className="bg-gray-50 border-t border-gray-200 text-gray-500">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
@@ -14,8 +14,8 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
                 <Flame className="w-5 h-5 text-white" />
               </div>
-              <span className="text-white font-bold text-xl">
-                Gás<span className="text-orange-400">Rápido</span>
+              <span className="text-gray-900 font-bold text-xl">
+                Junior <span className="text-orange-500">Gás</span>
               </span>
             </div>
             <p className="text-sm leading-relaxed">
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Navegação</h4>
+            <h4 className="text-gray-900 font-semibold mb-4">Navegação</h4>
             <ul className="space-y-2 text-sm">
               {[
                 ["#produtos", "Produtos"],
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contato</h4>
+            <h4 className="text-gray-900 font-semibold mb-4">Contato</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
@@ -78,9 +78,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs">
+        <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-xs">
           <p>
-            © {new Date().getFullYear()} GásRápido. Todos os direitos reservados.
+            © {new Date().getFullYear()} Junior Gás. Todos os direitos reservados.
           </p>
           <p>
             CNPJ: 00.000.000/0001-00 | Responsável Técnico: Nome Sobrenome

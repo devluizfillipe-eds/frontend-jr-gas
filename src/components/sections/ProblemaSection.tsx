@@ -30,9 +30,9 @@ export default function ProblemaSection() {
   return (
     <section
       id="problema"
-      className="py-20 bg-slate-950 relative overflow-hidden"
+      className="py-20 bg-gray-50 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/0 to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/0 to-gray-100/50" />
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,9 +44,9 @@ export default function ProblemaSection() {
           <span className="text-sm font-semibold text-red-400 uppercase tracking-widest mb-3 block">
             Você já passou por isso?
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
             Os problemas que deixam você{" "}
-            <span className="text-red-400">sem gás</span>
+            <span className="text-red-500">sem gás</span>
           </h2>
         </motion.div>
 
@@ -58,14 +58,14 @@ export default function ProblemaSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="flex gap-4 bg-slate-900/70 border border-slate-800 rounded-2xl p-6 hover:border-red-500/30 transition-colors"
+              className="flex gap-4 bg-white border border-gray-200 rounded-2xl p-6 hover:border-red-400/50 transition-colors shadow-sm"
             >
-              <div className="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                <p.icon className="w-6 h-6 text-red-400" />
+              <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <p.icon className="w-6 h-6 text-red-500" />
               </div>
               <div>
-                <h3 className="text-white font-semibold mb-1">{p.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <h3 className="text-gray-900 font-semibold mb-1">{p.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
                   {p.description}
                 </p>
               </div>

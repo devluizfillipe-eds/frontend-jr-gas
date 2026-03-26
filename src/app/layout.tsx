@@ -8,12 +8,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "GásRápido — Entrega de Gás em até 30 minutos",
+  title: "Junior Gás — Entrega de Gás em até 30 minutos",
   description:
     "Peça seu botijão de gás com entrega rápida e segura. Produtos originais, pagamento facilitado e atendimento 24h.",
-  keywords: ["gás", "botijão de gás", "entrega de gás", "gás rápido"],
+  keywords: ["gás", "botijão de gás", "entrega de gás", "Junior Gás"],
   openGraph: {
-    title: "GásRápido — Entrega de Gás em até 30 minutos",
+    title: "Junior Gás — Entrega de Gás em até 30 minutos",
     description: "Produto original, entrega expressa e pagamento facilitado.",
     type: "website",
   },
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-slate-950`}>
+      <body className={`${inter.variable} font-sans antialiased bg-white`}>
         {children}
       </body>
     </html>

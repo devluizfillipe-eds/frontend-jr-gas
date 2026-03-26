@@ -50,7 +50,7 @@ const diferenciais = [
 
 export default function DiferenciaisSection() {
   return (
-    <section id="diferenciais" className="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="diferenciais" className="py-20 bg-white relative overflow-hidden">
       {/* Background decor */}
       <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-3xl" />
 
@@ -65,7 +65,7 @@ export default function DiferenciaisSection() {
           <span className="text-sm font-semibold text-orange-400 uppercase tracking-widest mb-3 block">
             Por que nos escolher?
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
             Nossos{" "}
             <span className="text-orange-400">diferenciais</span>
           </h2>
@@ -79,15 +79,15 @@ export default function DiferenciaisSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:border-orange-500/30 hover:bg-slate-800 transition-all duration-300"
+              className="group p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-orange-400/40 hover:bg-orange-50/30 transition-all duration-300"
             >
               <div
                 className={`w-12 h-12 ${item.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
               >
                 <item.icon className={`w-6 h-6 ${item.color}`} />
               </div>
-              <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
+              <h3 className="text-gray-900 font-bold text-lg mb-2">{item.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
                 {item.description}
               </p>
             </motion.div>

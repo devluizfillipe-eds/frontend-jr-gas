@@ -43,9 +43,9 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="py-20 bg-slate-950 relative overflow-hidden"
+      className="py-20 bg-gray-50 relative overflow-hidden"
     >
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-900 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white to-transparent" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -57,7 +57,7 @@ export default function FAQSection() {
           <span className="text-sm font-semibold text-orange-400 uppercase tracking-widest mb-3 block">
             Dúvidas frequentes
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
             Perguntas e{" "}
             <span className="text-orange-400">Respostas</span>
           </h2>
@@ -75,12 +75,12 @@ export default function FAQSection() {
               <AccordionItem
                 key={i}
                 value={i}
-                className="bg-slate-900/80 border border-slate-700/50 rounded-xl px-5 hover:border-orange-500/30 transition-colors"
+                className="bg-white border border-gray-200 rounded-xl px-5 hover:border-orange-400/40 transition-colors shadow-sm"
               >
-                <AccordionTrigger className="text-white text-left font-medium hover:text-orange-400 hover:no-underline py-5">
+                <AccordionTrigger className="text-gray-900 text-left font-medium hover:text-orange-500 hover:no-underline py-5">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-400 text-sm leading-relaxed pb-5">
+                <AccordionContent className="text-gray-500 text-sm leading-relaxed pb-5">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>

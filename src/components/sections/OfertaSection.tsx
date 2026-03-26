@@ -28,7 +28,7 @@ export default function OfertaSection({ onSelectProduct }: OfertaSectionProps) {
   return (
     <section
       id="oferta"
-      className="py-20 bg-gradient-to-br from-orange-600/20 via-slate-900 to-red-900/10 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-orange-50 via-white to-red-50 relative overflow-hidden"
     >
       {/* Decorative glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -45,13 +45,13 @@ export default function OfertaSection({ onSelectProduct }: OfertaSectionProps) {
           <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/40 text-sm px-4 py-1.5 mb-6">
             ⚡ Oferta especial hoje
           </Badge>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
             Peça seu gás{" "}
             <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
               agora mesmo!
             </span>
           </h2>
-          <p className="text-slate-400 text-xl mb-10 leading-relaxed">
+          <p className="text-gray-500 text-xl mb-10 leading-relaxed">
             Entrega expressa na sua porta. Rápido, seguro e confiável.
           </p>
 
@@ -61,16 +61,16 @@ export default function OfertaSection({ onSelectProduct }: OfertaSectionProps) {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-slate-900/80 border border-orange-500/40 rounded-3xl p-8 mb-8 shadow-2xl"
+              className="bg-white border border-orange-400/40 rounded-3xl p-8 mb-8 shadow-xl"
             >
               <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="text-left">
-                  <p className="text-slate-400 text-sm mb-1">Produto destaque</p>
-                  <h3 className="text-white font-extrabold text-2xl">
+                  <p className="text-gray-500 text-sm mb-1">Produto destaque</p>
+                  <h3 className="text-gray-900 font-extrabold text-2xl">
                     {featuredProduct.name}
                   </h3>
                   {featuredProduct.original_price && (
-                    <p className="text-slate-500 line-through mt-1">
+                    <p className="text-gray-400 line-through mt-1">
                       {formatCurrency(featuredProduct.original_price)}
                     </p>
                   )}
@@ -91,7 +91,7 @@ export default function OfertaSection({ onSelectProduct }: OfertaSectionProps) {
           )}
 
           {/* Trust icons */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-slate-400 text-sm mb-8">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-gray-500 text-sm mb-8">
             <span className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-orange-400" />
               Entrega em 30 min
@@ -102,7 +102,7 @@ export default function OfertaSection({ onSelectProduct }: OfertaSectionProps) {
             </span>
           </div>
 
-          <p className="text-slate-500 text-sm mb-4">
+          <p className="text-gray-400 text-sm mb-4">
             Prefere pelo WhatsApp?{" "}
             <a
               href={whatsappUrl}

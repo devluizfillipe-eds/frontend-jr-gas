@@ -81,7 +81,7 @@ function OrderDetail({
         hr { border: 1px dashed #ccc; margin: 12px 0; }
         .total { font-size: 18px; font-weight: bold; }
       </style></head><body>
-        <h1>🔥 GásRápido — Pedido #${order.id.slice(-8).toUpperCase()}</h1>
+        <h1>🔥 Junior Gás — Pedido #${order.id.slice(-8).toUpperCase()}</h1>
         <div class="section">
           <div class="label">Data:</div>
           <div>${formatDate(order.created_at)}</div>
@@ -345,7 +345,7 @@ export default function AdminPage() {
             <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Flame className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-white font-bold text-2xl">GásRápido Admin</h1>
+            <h1 className="text-white font-bold text-2xl">Junior Gás Admin</h1>
             <p className="text-slate-400 text-sm mt-1">Painel administrativo</p>
           </div>
 
@@ -364,7 +364,7 @@ export default function AdminPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="bg-slate-800 border-slate-700 text-white"
-                placeholder="admin@gasrapido.com"
+                placeholder="admin@junior-gas.com"
               />
             </div>
             <div>
@@ -405,7 +405,7 @@ export default function AdminPage() {
               <Flame className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="font-bold text-white">GásRápido Admin</h1>
+              <h1 className="font-bold text-white">Junior Gás Admin</h1>
               <p className="text-slate-400 text-xs">Painel de Pedidos</p>
             </div>
           </div>

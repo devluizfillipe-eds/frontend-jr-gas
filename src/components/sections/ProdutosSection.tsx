@@ -37,8 +37,8 @@ function ProductCard({
       viewport={{ once: true }}
       className={`relative rounded-3xl overflow-hidden border transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col ${
         featured
-          ? "border-orange-500/60 bg-gradient-to-b from-orange-500/10 to-slate-900 shadow-xl shadow-orange-500/20 ring-2 ring-orange-500/30"
-          : "border-slate-700/50 bg-slate-900/80 hover:border-slate-600"
+          ? "border-orange-400/60 bg-gradient-to-b from-orange-50 to-white shadow-xl shadow-orange-400/20 ring-2 ring-orange-400/30"
+          : "border-gray-200 bg-white hover:border-gray-300 shadow-sm"
       }`}
     >
       {featured && (
@@ -62,7 +62,7 @@ function ProductCard({
       {/* Image */}
       <div
         className={`aspect-square flex items-center justify-center ${
-          featured ? "bg-orange-500/5" : "bg-slate-800/50"
+          featured ? "bg-orange-50" : "bg-gray-50"
         }`}
       >
         {product.image_url ? (
@@ -75,7 +75,7 @@ function ProductCard({
         ) : (
           <div className="text-center py-12">
             <div className="text-6xl mb-2">🔥</div>
-            <p className="text-slate-500 text-xs">Imagem do produto</p>
+            <p className="text-gray-400 text-xs">Imagem do produto</p>
           </div>
         )}
       </div>
@@ -84,17 +84,17 @@ function ProductCard({
       <div className="p-5 flex flex-col flex-1">
         <h3
           className={`font-bold text-lg mb-1 ${
-            featured ? "text-white" : "text-slate-200"
+            featured ? "text-orange-600" : "text-gray-900"
           }`}
         >
           {product.name}
         </h3>
-        <p className="text-slate-400 text-sm mb-3 flex-1">
+        <p className="text-gray-500 text-sm mb-3 flex-1">
           {product.description}
         </p>
 
         {product.weight_kg && (
-          <div className="flex items-center gap-1.5 text-slate-500 text-xs mb-3">
+          <div className="flex items-center gap-1.5 text-gray-400 text-xs mb-3">
             <Weight className="w-3.5 h-3.5" />
             {product.weight_kg}kg
           </div>
@@ -104,7 +104,7 @@ function ProductCard({
         <div className="mb-4">
           {product.original_price && (
             <div className="flex items-center gap-2 mb-0.5">
-              <span className="text-slate-500 text-sm line-through">
+              <span className="text-gray-400 text-sm line-through">
                 {formatCurrency(product.original_price)}
               </span>
               <Tag className="w-3 h-3 text-green-400" />
@@ -112,7 +112,7 @@ function ProductCard({
           )}
           <span
             className={`text-2xl font-extrabold ${
-              featured ? "text-orange-400" : "text-white"
+              featured ? "text-orange-500" : "text-gray-900"
             }`}
           >
             {formatCurrency(product.price)}
@@ -124,7 +124,7 @@ function ProductCard({
           className={`w-full rounded-xl font-bold py-5 text-base shadow-lg transition-all ${
             featured
               ? "bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700 shadow-orange-500/30"
-              : "bg-slate-700 hover:bg-slate-600 text-white"
+              : "bg-gray-100 hover:bg-gray-200 text-gray-800"
           }`}
         >
           <ShoppingCart className="w-4 h-4 mr-2" />
@@ -143,7 +143,7 @@ export default function ProdutosSection({ onSelectProduct }: ProdutosSectionProp
   const { products, featuredProduct, otherProducts, loading } = useProducts();
 
   return (
-    <section id="produtos" className="py-20 bg-slate-950">
+    <section id="produtos" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -152,14 +152,14 @@ export default function ProdutosSection({ onSelectProduct }: ProdutosSectionProp
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="text-sm font-semibold text-orange-400 uppercase tracking-widest mb-3 block">
+          <span className="text-sm font-semibold text-orange-500 uppercase tracking-widest mb-3 block">
             Nossos Produtos
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
             Escolha o botijão{" "}
-            <span className="text-orange-400">ideal para você</span>
+            <span className="text-orange-500">ideal para você</span>
           </h2>
-          <p className="text-slate-400 mt-4 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 mt-4 text-lg max-w-2xl mx-auto">
             Trabalhamos com botijões originais de marcas homologadas pela ANP.
           </p>
         </motion.div>
@@ -169,7 +169,7 @@ export default function ProdutosSection({ onSelectProduct }: ProdutosSectionProp
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="rounded-3xl bg-slate-800/50 animate-pulse aspect-[3/4]"
+                className="rounded-3xl bg-gray-200 animate-pulse aspect-[3/4]"
               />
             ))}
           </div>

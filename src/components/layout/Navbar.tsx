@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-orange-500/20"
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-orange-500/20"
           : "bg-transparent"
       }`}
     >
@@ -39,8 +39,8 @@ export default function Navbar() {
             <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
               <Flame className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl tracking-tight">
-              Gás<span className="text-orange-400">Rápido</span>
+            <span className="text-gray-900 font-bold text-xl tracking-tight">
+              Junior <span className="text-orange-500">Gás</span>
             </span>
           </Link>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-300 hover:text-orange-400 transition-colors text-sm font-medium"
+                className="text-gray-600 hover:text-orange-500 transition-colors text-sm font-medium"
               >
                 {link.label}
               </a>
@@ -68,7 +68,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden text-gray-700 p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"
           >
@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-slate-900/98 backdrop-blur-md border-t border-slate-700/50 py-4">
+          <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-gray-200 py-4">
             <div className="flex flex-col gap-3 px-4">
               {navLinks.map((link) => (
                 <a
@@ -87,8 +87,8 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`text-sm font-medium py-2 transition-colors ${
                     link.href === "#oferta"
-                      ? "text-orange-400 font-bold"
-                      : "text-slate-300 hover:text-orange-400"
+                      ? "text-orange-500 font-bold"
+                      : "text-gray-600 hover:text-orange-500"
                   }`}
                 >
                   {link.label}

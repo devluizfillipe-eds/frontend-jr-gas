@@ -15,7 +15,7 @@ export async function createPixCharge(
     console.warn("⚠️  AbacatePay: using simulated PIX response (no API key)");
     return {
       id: `sim_${Date.now()}`,
-      brCode: "00020126580014BR.GOV.BCB.PIX0136placeholder-pix-key-uuid5204000053039865802BR5913GasRapido6009SAO PAULO62070503***6304ABCD",
+      brCode: "00020126580014BR.GOV.BCB.PIX0136placeholder-pix-key-uuid5204000053039865802BR5912JuniorGas006009SAO PAULO62070503***6304ABCD",
       qrCodeUrl: "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=pix-simulado",
       status: "PENDING",
     };
