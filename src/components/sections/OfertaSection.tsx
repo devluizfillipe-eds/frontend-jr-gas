@@ -23,7 +23,7 @@ export default function OfertaSection({ onSelectProduct }: OfertaSectionProps) {
 
   const whatsappNumber =
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511999999999";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá%2C+gostaria+de+comprar+o+gás.`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá%2C+vim+pelo+site+e+gostaria+de+um+atendimento`;
 
   return (
     <section

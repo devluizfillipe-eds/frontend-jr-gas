@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Timer, ShieldCheck, PhoneCall, MapPin, Star, Truck } from "lucide-react";
+import { Timer, ShieldCheck, PhoneCall, MapPin, Star, Truck, Flame } from "lucide-react";
 
 const diferenciais = [
   {
@@ -17,6 +17,13 @@ const diferenciais = [
     description: "Produtos certificados pelo INMETRO e homologados pela ANP.",
     color: "text-blue-400",
     bg: "bg-blue-500/10",
+  },
+  {
+    icon: Flame,
+    title: "Gás do Povo",
+    description: "Aceitamos o benefício Gás do Povo do Governo Estadual.",
+    color: "text-orange-400",
+    bg: "bg-orange-500/10",
   },
   {
     icon: PhoneCall,
@@ -82,9 +89,14 @@ export default function DiferenciaisSection() {
               className="group p-6 rounded-2xl bg-gray-50 border border-gray-200 hover:border-orange-400/40 hover:bg-orange-50/30 transition-all duration-300"
             >
               <div
-                className={`w-12 h-12 ${item.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                className={`w-12 h-12 ${item.bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform overflow-hidden`}
               >
-                <item.icon className={`w-6 h-6 ${item.color}`} />
+                {typeof item.icon === "string" ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={item.icon} alt={item.title} className="w-full h-full object-cover" />
+                ) : (
+                  <item.icon className={`w-6 h-6 ${item.color}`} />
+                )}
               </div>
               <h3 className="text-gray-900 font-bold text-lg mb-2">{item.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">

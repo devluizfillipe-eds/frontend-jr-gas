@@ -1,8 +1,9 @@
-import { Flame, Phone, Instagram, Facebook, MapPin } from "lucide-react";
+import { Flame, Phone, Instagram, MapPin } from "lucide-react";
 
 export default function Footer() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "553133577951";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá%2C+gostaria+de+comprar+o+gás.`;
+  const message = encodeURIComponent("Olá, vim pelo site e gostaria de um atendimento");
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200 text-gray-500">
@@ -64,14 +65,16 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                <span>Sua cidade, Estado</span>
+                <span>Avenida bueno do prado 376 Jardim Laguna, Contagem - MG </span>
               </li>
               <li className="flex gap-3 mt-4">
-                <a href="#" className="hover:text-orange-400 transition-colors">
+                <a
+                  href="https://www.instagram.com/juniorgas_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-400 transition-colors"
+                >
                   <Instagram className="w-5 h-5" />
-                </a>
-                <a href="#" className="hover:text-orange-400 transition-colors">
-                  <Facebook className="w-5 h-5" />
                 </a>
               </li>
             </ul>
@@ -83,7 +86,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Junior Gás. Todos os direitos reservados.
           </p>
           <p>
-            CNPJ: 00.000.000/0001-00 | Responsável Técnico: Nome Sobrenome
+            CNPJ: 61.337.570/0001-66 | Desenvolvido por Luiz Fillipe
           </p>
         </div>
       </div>

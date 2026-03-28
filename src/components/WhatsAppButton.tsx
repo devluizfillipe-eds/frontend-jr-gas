@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function WhatsAppButton() {
   const whatsappNumber =
     process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511999999999";
-  const message = encodeURIComponent("Olá, gostaria de comprar o gás.");
+  const message = encodeURIComponent("Olá, vim pelo site e gostaria de um atendimento");
   const url = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (

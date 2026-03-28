@@ -10,7 +10,7 @@ import { useRef } from "react";
 const badges = [
   { icon: Clock, text: "Entrega Rápida" },
   { icon: Shield, text: "Garantido" },
-  { icon: Zap, text: "24h/7dias" },
+  { icon: Zap, text: "Segunda a Segunda" },
 ];
 
 export default function HeroSection() {
