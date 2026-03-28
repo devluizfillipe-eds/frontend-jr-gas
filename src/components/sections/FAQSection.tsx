@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "Vocês entregam no meu bairro?",
-    a: "Temos cobertura em toda a cidade e regiões próximas. Se tiver dúvida, entre em contato pelo WhatsApp antes de fazer o pedido.",
+    a: "Temos cobertura em toda Regional Ressaca e bairros adjacentes qualquer duvida entre em contato pelo WhatsApp.",
   },
   {
     q: "O produto é original?",

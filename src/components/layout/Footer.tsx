@@ -1,7 +1,7 @@
 import { Flame, Phone, Instagram, Facebook, MapPin } from "lucide-react";
 
 export default function Footer() {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "5511999999999";
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "553133577951";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá%2C+gostaria+de+comprar+o+gás.`;
 
   return (

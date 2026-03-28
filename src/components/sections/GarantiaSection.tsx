@@ -12,15 +12,15 @@ const garantias = [
   },
   {
     icon: RefreshCcw,
-    title: "Devolução Garantida",
+    title: "Troca Garantida",
     description:
-      "Se o produto chegar com algum problema, devolvemos seu dinheiro ou substituímos na hora.",
+      "Se o produto chegar com algum problema, trocamos na hora.",
   },
   {
     icon: ThumbsUp,
     title: "Satisfação Total",
     description:
-      "Mais de 500 clientes satisfeitos. Não ficou feliz? Resolveremos até você ficar.",
+      "Mais de 900 clientes satisfeitos. Não ficou feliz? Resolveremos até você ficar.",
   },
 ];
 
@@ -82,9 +82,9 @@ export default function GarantiaSection() {
           className="mt-12 mx-auto max-w-sm bg-gradient-to-r from-green-500/20 to-green-600/10 border border-green-500/30 rounded-2xl p-6 text-center"
         >
           <div className="text-4xl mb-2">🛡️</div>
-          <p className="text-gray-900 font-bold text-lg">Garantia de 7 dias</p>
+          <p className="text-gray-900 font-bold text-lg">Garantia de satisfação</p>
           <p className="text-gray-500 text-sm mt-1">
-            Conforme o Código de Defesa do Consumidor
+            Sua satisfação é nossa prioridade. Se não ficar satisfeito, resolveremos até você ficar.
           </p>
         </motion.div>
       </div>

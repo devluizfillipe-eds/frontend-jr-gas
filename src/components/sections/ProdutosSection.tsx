@@ -160,7 +160,7 @@ export default function ProdutosSection({ onSelectProduct }: ProdutosSectionProp
             <span className="text-orange-500">ideal para você</span>
           </h2>
           <p className="text-gray-500 mt-4 text-lg max-w-2xl mx-auto">
-            Trabalhamos com botijões originais de marcas homologadas pela ANP.
+            Trabalhamos com botijões originais da Supergasbras.
           </p>
         </motion.div>
 

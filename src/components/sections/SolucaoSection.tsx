@@ -6,7 +6,7 @@ import { CheckCircle, Flame } from "lucide-react";
 const solutions = [
   "Entrega em até 30 minutos na sua porta",
   "Produtos certificados com qualidade garantida",
-  "Atendimento 24h via WhatsApp",
+  "Atendimento de segunda a segunda via WhatsApp",
   "Rastreamento em tempo real do seu pedido",
   "Pagamento facilitado: PIX, dinheiro ou cartão",
   "Nota fiscal e transparência total",

@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useRef } from "react";
 
 const badges = [
-  { icon: Clock, text: "30 min" },
+  { icon: Clock, text: "Entrega Rápida" },
   { icon: Shield, text: "Garantido" },
   { icon: Zap, text: "24h/7dias" },
 ];
@@ -75,7 +75,7 @@ export default function HeroSection() {
                     />
                   </defs>
                   <text
-                    fill="#ea580c"
+                    fill="#000000ff"
                     fillOpacity="0.35"
                     fontSize="64"
                     fontWeight="800"
@@ -124,7 +124,7 @@ export default function HeroSection() {
                     />
                   </defs>
                   <text
-                    fill="#ea580c"
+                    fill="#000000ff"
                     fontSize="64"
                     fontWeight="900"
                     fontFamily="Inter, sans-serif"
