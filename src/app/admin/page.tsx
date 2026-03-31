@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { supabase } from "@/lib/supabase";
 import { getOrders, updateOrderStatus } from "@/services/orders";
 import type { Order } from "@/types";
+import { authenticateAdmin } from "./actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -262,7 +263,7 @@ function OrderDetail({
 
 // ─── Main Admin Page ──────────────────────────────────────────────────────────
 export default function AdminPage() {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [authLoading, setAuthLoading] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
@@ -280,10 +281,15 @@ export default function AdminPage() {
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setAuthLoading(true);
+    
+    // Convert username to a mock email for Supabase if it isn't one
+    const email = username.includes("@") ? username : `${username}@juniorgas.com`;
+
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
+    
     if (error) {
       toast.error("Credenciais inválidas.");
     } else {
@@ -354,17 +360,17 @@ export default function AdminPage() {
             className="bg-slate-900 border border-slate-700 rounded-2xl p-6 space-y-4"
           >
             <div>
-              <Label htmlFor="email" className="text-slate-300 mb-1.5 block">
-                Email
+              <Label htmlFor="username" className="text-slate-300 mb-1.5 block">
+                Usuário
               </Label>
               <Input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                id="username"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
                 className="bg-slate-800 border-slate-700 text-white"
-                placeholder="admin@junior-gas.com"
+                placeholder="juniorgas.admin"
               />
             </div>
             <div>

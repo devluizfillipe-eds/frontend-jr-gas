@@ -31,14 +31,12 @@ export default function SolucaoSection() {
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
-            <div className="w-full aspect-square max-w-md mx-auto rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 flex items-center justify-center">
-              <div className="text-center py-12">
-                <Flame className="w-24 h-24 text-orange-500 mx-auto mb-4" />
-                <p className="text-gray-500 text-sm">[Imagem de entrega]</p>
-                <p className="text-gray-400 text-xs mt-1">
-                  Substitua pela imagem real
-                </p>
-              </div>
+            <div className="w-full aspect-square max-w-md mx-auto rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 overflow-hidden flex items-center justify-center relative">
+              <img 
+                src="/entrega.png" 
+                alt="Entrega Rápida Junior Gás" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
