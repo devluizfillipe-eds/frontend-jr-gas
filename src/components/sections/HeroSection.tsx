@@ -1,11 +1,11 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { ChevronDown, Clock, Shield, Zap } from "lucide-react";
 import Image from "next/image";
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const badges = [
   { icon: Clock, text: "Entrega Rápida" },
@@ -16,11 +16,26 @@ const badges = [
 export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null);
   const { scrollY } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile(); // Check on mount
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   
+  // Suaviza a leitura do scroll para a animação não ficar "engasgando" nos repaints do mobile
+  const smoothScrollY = useSpring(scrollY, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   // Como o usuário vai rolar a tela, mapeamos 0px até 800px de scroll
   // para deslocar o texto ao longo do path (de 50% centro até 85% direita).
   // Os dois se movem sincronicamente.
-  const orbitOffset = useTransform(scrollY, [0, 800], ["50%", "85%"]);
+  const orbitOffset = useTransform(smoothScrollY, [0, 800], ["50%", "85%"]);
 
   return (
     <section
@@ -30,8 +45,8 @@ export default function HeroSection() {
     >
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange-400/15 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-red-400/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-orange-400/15 rounded-full blur-2xl md:blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-red-400/10 rounded-full blur-2xl md:blur-3xl" />
       </div>
 
       {/* Grid pattern */}
@@ -97,10 +112,14 @@ export default function HeroSection() {
                   alt="Botijão de gás Junior Gás"
                   width={640}
                   height={840}
-                  className="object-contain"
+                  className={cn(
+                    "object-contain transition-all duration-300",
+                    !isMobile && "drop-shadow-[0_20px_40px_rgba(0,0,0,0.22)]"
+                  )}
                   style={{
-                    filter:
-                      "drop-shadow(0 20px 40px rgba(0,0,0,0.22)) drop-shadow(0 8px 16px rgba(251,146,60,0.25))",
+                    filter: isMobile 
+                      ? "drop-shadow(0 8px 16px rgba(0,0,0,0.3))"
+                      : "drop-shadow(0 20px 40px rgba(0,0,0,0.22)) drop-shadow(0 8px 16px rgba(251,146,60,0.25))",
                   }}
                   priority
                 />
